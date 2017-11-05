@@ -89,22 +89,10 @@ public class SendProcessThread extends Thread {
             mOutStream.write(buffer);
 
         } catch (IOException e) {
+            writingErrorOccurred();
             Log.e(TAG, "Exception during write", e);
         }
     }
-
-    public void cleanUpAndStop() {
-        try {
-            mState = STATE_NONE;
-            mBluetoothSocket.close();
-        } catch (IOException e) {
-            sendToastMessage("close() of connect socket failed");
-        }
-    }
-
-
-
-
 
     /**
      * Indicate that the connection was lost and notify the UI Activity.
@@ -116,10 +104,20 @@ public class SendProcessThread extends Thread {
         // Send message that connection error occurred.
         Message msg = mHandler.obtainMessage(Constants.CONNECTION_LOST);
         Bundle bundle = new Bundle();
-        bundle.putString(Constants.TOAST, "SendProcessThread: failed due to IO exception.");
+        bundle.putString(Constants.TOAST, "SendProcessThread: failed during writing.");
         msg.setData(bundle);
         mHandler.sendMessage(msg);
     }
+
+    public void cleanUpAndStop() {
+        try {
+            mState = STATE_NONE;
+            mBluetoothSocket.close();
+        } catch (IOException e) {
+            sendToastMessage("close() of connect socket failed");
+        }
+    }
+
 
     private void initialize() {
         mRunning = false;

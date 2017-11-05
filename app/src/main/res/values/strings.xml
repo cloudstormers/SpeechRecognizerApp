@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="app_name">SpeechRecognition</string>
+<string name="action_settings">Settings</string>
+<string name="hello_world">Hello world!</string>
+<string name="speech_prompt">Say something&#8230;</string>
+<string name="speech_not_supported">Sorry! Your device doesn\'t support speech input</string>
+<string name="tap_on_mic">Tap on mic to speak</string>
+
+    <string name="start_synchronization_btn_text">Start</string>
+    <string name="stop_synchronization_btn_text">Stop</string>
+    <string name="log_errors_btn_text">Log errors</string>
+    <string name="log_pings_btn_text">Log pings</string>
+
+    <string name="log_file_suffix_name">_errors.txt</string>
+    <string name="log_pings_file_suffix_name">_pings.txt</string>
+    <string name="folder_for_log_files_name">BluetoothSyncAppData</string>
+
+    <string name="permission_alert_dialog_btn_txt">Ok</string>
+    <string name="permission_alert_dialog_title">Why is it good to enable this permission?</string>
+    <string name="permission_alert_dialog_message">You need to enable write permissions in order to log the data.</string>
+
+    <string name="bt_module_not_available_message">Bluetooth is not available on your device.</string>
+    <string name="bt_denied_message">App cannot functino without bluetooth.</string>
+    <string name="bt_turned_on_message">Bluetooth is now on.</string>
+
+    <string name="not_connected">You cannot send messages you are not connected to a receiver.</string>
+
+    <string name="synchronization_begin_message">Synchronization started.</string>
+    <string name="synchronization_end_message">Synchronization finished.</string>
+    <string name="error_message_encode_packet_method">Error in encode packet method!</string>
+    <string name="error_all_pings_high_message">Sync failed, high ping for ALL synchronization messages.</string>
+
+    <string name="started_synchronization_feedback_message">Started listening for incoming connections.</string>
+    <string name="stoped_synchronization_feedback_message">Listening stopped.</string>
+    <string name="cleared_screen_feedback_message">Screen cleared.</string>
+    <string name="sync_already_started_feedback_message">Listening for incoming connections already started.</string>
+    <string name="sync_already_stoped_feedback_message">Listening already stoped.</string>
+    <string name="logged_errors_succesful_feedback_message">Logged errors to a file.</string>
+    <string name="logged_pings_succesful_feedback_message">Logged pings to a file</string>
+    <string name="permission_write_external_denied_feedback_message">Writing to a file failed! Permission not granted.</string>
+
+</resources>
